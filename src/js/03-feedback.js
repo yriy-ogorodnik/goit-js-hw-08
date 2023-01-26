@@ -14,6 +14,9 @@ refs.textarea.addEventListener('input', throttle(onTextareaInput, 500));
 
 function onFormSubmit(evt) {
   evt.preventDefault();
+  if (refs.input.value === '' || refs.textarea.value === '') {
+    return alert('всі поля повинні бути заповнені');
+  }
 
   localStorage.removeItem('LOCALSTORAGE_KEY');
   evt.currentTarget.reset();

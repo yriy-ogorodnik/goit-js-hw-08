@@ -19,7 +19,7 @@ const itemCards = createItemCards(galleryItems);
 
 gallery.insertAdjacentHTML('beforeend', itemCards);
 
-gallery.addEventListener('click', onGalleryItemsClick);
+// gallery.addEventListener('click', onGalleryItemsClick);
 
 // -----------------------------------------------------------------
 function createItemCards(Items) {
@@ -31,13 +31,13 @@ function createItemCards(Items) {
   }).join('');
 }
 
-function onGalleryItemsClick(evt) {
-  if (evt.target.nodeName !== 'IMG') {
-    return;
-  }
+// function onGalleryItemsClick(evt) {
+//   if (evt.target.nodeName !== 'IMG') {
+//     return;
+//   }
 
-  // console.log(' evt', evt.target);
-}
+//   // console.log(' evt', evt.target);
+// }
 
 new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
