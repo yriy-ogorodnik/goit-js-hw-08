@@ -10,7 +10,7 @@ const LOCALSTORAGE_KEY = 'feedback-form-state';
 
 populateMessageOutput();
 refs.form.addEventListener('submit', onFormSubmit);
-refs.textarea.addEventListener('input', throttle(onTextareaInput, 500));
+refs.form.addEventListener('input', throttle(onTextareaInput, 500));
 
 function onFormSubmit(evt) {
   evt.preventDefault();
